@@ -14,10 +14,10 @@ Python >= 3.6.x, PyTorch == 0.3.1, torchvision == 0.2.0, hpbandster, ConfigSpace
 ## Running the joint search
 The code is only compatible with CIFAR-10, which will be automatically downloaded, however it can be easily extended to other image datasets with the same resolution, such as CIFAR-100, SVHN, etc.
 
-For starting BOHB one has to specify 5 parameters: `min_budget`, `max_budget`, `\eta`, `num_iterations` and `num_workers`. You can change them in the script `BOHB-CIFAR10.sh`.
-NOTE: We used the [Slurm Workload Manager](https://slurm.schedmd.com/) environment to run our jobs, but it can be easily adapted to other job scheduling systems.
+For starting BOHB one has to specify 5 parameters: `min_budget`, `max_budget`, `eta`, `num_iterations` and `num_workers`. You can change them in the script `BOHB-CIFAR10.sh`.\
+> NOTE: We used the [Slurm Workload Manager](https://slurm.schedmd.com/) environment to run our jobs, but it can be easily adapted to other job scheduling systems.
 
-To start the search with the default settings (`min_budget=400`, `max_budget=10800`, `\eta =3`, `num_iterations=32`, `num_workers=10`) used in the paper just run:
+To start the search with the default settings (`min_budget=400`, `max_budget=10800`, `eta =3`, `num_iterations=32`, `num_workers=10`) used in the paper just run:
 
 ```
 sbatch BOHB-CIFAR10.sh
