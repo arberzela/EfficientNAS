@@ -29,6 +29,11 @@ def Loader(config):
         transforms.Normalize(mean, std),
     ])
 
+    if config.auto_aug:
+        train_transform.transforms.append(transforms.ToPILImage())
+        train_transform.transforms.append(AutoAugment())
+        train_transform.transforms.append(transforms.ToTensor())
+
     if config.cutout:
         train_transform.transforms.append(Cutout(n_holes=config.n_holes, length=config.length))
 

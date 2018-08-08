@@ -58,6 +58,9 @@ class Parser(object):
         # mixup
         parser.add_argument('--alpha', type=float, default=0.2, help='interpolation strength (uniform=1., ERM=0.)')
 
+        # autoAugment options
+        parser.add_argument('--auto_aug', action='store_true', default=False, help='Apply AutoAugment')
+
         # PyramidNet options
         #parser.add_argument('--pynet_alpha', type=int, default=200, help='number of new channel increases per depth (default: 200)')
 
