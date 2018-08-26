@@ -2,7 +2,7 @@
 #
 # submit to the right queue
 #SBATCH -p meta_gpu-ti
-#SBATCH --array=1-15
+#SBATCH --array=1-10
 #
 # the execution will use the current directory for execution (important for relative paths)
 #SBATCH -D .
